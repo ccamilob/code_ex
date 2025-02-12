@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-CodeExApplication<code_ex>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.code_ex.code_ex.CodeExApplication",
+            "projectName": "code_ex",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
