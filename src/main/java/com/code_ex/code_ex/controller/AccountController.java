@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.code_ex.code_ex.model.Account;
 import com.code_ex.code_ex.service.AccountService;
 
+import jakarta.validation.Valid;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -26,7 +28,7 @@ public class AccountController {
     }
 
     @PostMapping
-    public ResponseEntity<Account> createAccount(@RequestBody Account account) {
+    public ResponseEntity<Account> createAccount(@Valid @RequestBody Account account) {
         Account newAccount = service.createAccount(account.getOwnerName(), account.getAccountNumber(),
                 account.getBalance());
         return ResponseEntity.ok(newAccount);
